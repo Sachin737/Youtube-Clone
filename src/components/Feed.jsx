@@ -19,7 +19,7 @@ const Feed = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-10">
           {!loading &&
             searchResults.map((el, index) => {
-              if (el.type != "video") return false;
+              if (el.type !== "video") return false;
 
               // used index as key !!! error solved :)
               return <VideoCard key={index} video={el?.video}></VideoCard>;
